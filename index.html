@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html> 
 <head>
-  <h1>INTENTION TIMER</h1>
+  <title>Intention Timer</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+  <link href="styles.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-  <main>
+  <h1>INTENTION TIMER</h1>
+  <main class="new-activity-page">
     <h2>New Activity</h2>
-  <section> 
+  <div class="categories"> 
     <p>Select a category:</p>
-    <button><img>Study</button>
-    <button><img>Meditate</button>
-    <button><img>Exercise</button>
+    <section class="category-buttons">
+      <button>
+        <img src="intention-timer/assets/study-active.svg" 
+        alt="study active logo">Study</button>
+      <button>
+        <img src="intention-timer/assets/meditate-active.svg" 
+        alt="meditate active logo">Meditate</button>
+      <button>
+        <img src="intention-timer/assets/exercise-active.svg" 
+        alt="exercise acrtive logo">Exercise</button>
+    </section>
+    <section class="category-inputs">
     <p>What would you like to accomplish during this time?</p>
     <input></input>
     <p>Minutes</p>
     <input></input>
     <p>Seconds</p>
     <input></input>
-    <button>START ACTIVITY</button>
-  </section> 
-<!-- I AM DEBATING DIVIDING THE MAIN 
-INTO TWO or THREE SECTIONS and putting them
-all in a DIV. First section would include 
-the first <p> and three buttons.
-second section the <p> and three inputs.
-Thoughts? -->
-
+    </section>
+    <button class="start-button">START ACTIVITY</button>
+  </div> 
   <aside>
     <h2>Past Activities</h2>
-    <section>
+    <section class="activity-log">
       <p>
       You haven't logged any activities yet. 
       Complete the form to the left to get started!
       </p>
-      <!-- I am guessing this message could be hidden 
-      on a fn if user has logged an activity so it
-      hides the message. -->
     </section>
   </aside>
  </main>
+ <script src="./main.js"></script>
 </body>
 </html>
