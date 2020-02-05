@@ -9,42 +9,44 @@
   <h1>INTENTION TIMER</h1>
   <main class="new-activity-page">
     <h2>New Activity</h2>
-  <div class="categories"> 
-    <p class="select-option">Select a category:</p>
-    <section class="category-buttons">
-      <button class="activity-button">
-        <img src="./assets/study.svg" 
-        alt="study active logo">Study</button>
-      <button class="activity-button">
-        <img src="./assets/meditate.svg" 
-        alt="meditate active logo">Meditate</button>
-      <button class="activity-button">
-        <img src="./assets/exercise.svg" 
-        alt="exercise acrtive logo">Exercise</buttonclass="activity-button">
-    </section>
-    <section class="category-inputs">
-      <div class="accomplish-input">
-        <p>What would you like to accomplish during this time?</p>
-        <input></input>
+  <div class="cat-shell">
+    <div class="categories"> 
+      <p class="select-option">Select a category:</p>
+        <section class="category-buttons">
+        <button class="activity-button">
+          <img src="./assets/study.svg" 
+          alt="study active logo">Study</button>
+        <button class="activity-button">
+          <img src="./assets/meditate.svg" 
+          alt="meditate active logo">Meditate</button>
+        <button class="activity-button">
+          <img src="./assets/exercise.svg" 
+          alt="exercise acrtive logo">Exercise</buttonclass="activity-button">
+      </section>
+      <section class="category-inputs">
+        <div class="accomplish-input">
+          <p>What would you like to accomplish during this time?</p>
+          <input></input>
+        </div>
+        <div class="time-inputs">
+        <div class="minutes-input">
+          <p>Minutes</p>
+          <input></input>
+        </div>
+        <div class="seconds-input">
+          <p>Seconds</p>
+          <input></input>
+        </div>
       </div>
-      <div class="time-inputs">
-      <div class="minutes-input">
-        <p>Minutes</p>
-        <input></input>
-      </div>
-      <div class="seconds-input">
-        <p>Seconds</p>
-        <input></input>
-      </div>
-    </div>
-    </section>
+     </section>
     <button class="start-button">START ACTIVITY</button>
-  </div> 
+    </div> 
+  </div>
   <aside>
     <h2>Past Activities</h2>
     <section class="activity-log">
-      <p>
-      You haven't logged any activities yet. 
+      <p class="default-message">
+      You haven't logged any activities yet.<br>
       Complete the form to the left to get started!
       </p>
     </section>
