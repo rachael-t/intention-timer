@@ -83,10 +83,31 @@ input {
     flex-wrap: wrap;
 }
 
+.warning-message {
+    color: #EFB7EC;
+    margin: 5px 0px 0px 0px;
+    height: 15%;
+    width: 50%;
+}
+
+.warning-message img, p {
+    display: inline-block;
+    font-size: 13px;
+}
+
+.warning-message img {
+    width: 15px;
+    margin: 0px 5px 0px 0px;
+}
+
+.no-warning {
+    /* display: none; */
+}
+
+
 .accomplish-input {
     flex: 0 1 100%;
-    margin: 45px 0px;
-
+    margin: 45px 0px 0px 0px;
 }
 
 .time-inputs {
@@ -149,6 +170,27 @@ aside {
     color: #FD8078;
     border-color: #FD8078;
 }
+
+
+/* TIMER CAT SHELL BLANK PAGE STYLING: */
+
+/* .timer-cat-shell {
+    display: none;
+    margin: 80px 40px 40px 40px;
+    width: 59%;
+     color: #fff;
+    for dramatic purposes 
+    background-color: black; */
+    
+}
+
+
+
+
+
+
+
+
 
 
 /* SPECS:
