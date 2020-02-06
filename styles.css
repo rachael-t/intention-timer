@@ -101,7 +101,7 @@ input {
 }
 
 .no-warning {
-    /* display: none; */
+    display: none;
 }
 
 
@@ -182,7 +182,7 @@ aside {
     for dramatic purposes 
     background-color: black; */
     
-}
+
 
 
 
