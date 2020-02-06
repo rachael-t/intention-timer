@@ -9,38 +9,45 @@
   <h1>INTENTION TIMER</h1>
   <main class="new-activity-page">
     <h2>New Activity</h2>
-  <div class="cat-shell">
-    <div class="categories"> 
+  
+  <div class="cat-shell timer-cat-shell">
+    <form class="categories">
       <p class="select-option">Select a category:</p>
         <section class="category-buttons">
         <button class="activity-button study-button">
-          <img src="./assets/study.svg" 
+          <img src="./assets/study.svg"
           alt="study logo">Study</button>
         <button class="activity-button meditate-button">
-          <img src="./assets/meditate.svg" 
+          <img src="./assets/meditate.svg"
           alt="meditate logo">Meditate</button>
         <button class="activity-button exercise-button">
-          <img src="./assets/exercise.svg" 
-          alt="exercise logo">Exercise</buttonclass="activity-button">
+          <img src="./assets/exercise.svg"
+          alt="exercise logo">Exercise</button>
       </section>
       <section class="category-inputs">
         <div class="accomplish-input">
           <p>What would you like to accomplish during this time?</p>
-          <input></input>
+          <input type="text" id="accomplish" name="accomplish"  required></input>
         </div>
+        <section class="warning-message">
+          <div class="no-warning">
+          <img src="./assets/warning.svg" alt="warning sign">
+          <p>A description is required.</p>
+          </div>
+        </section>
         <div class="time-inputs">
         <div class="minutes-input">
           <p>Minutes</p>
-          <input></input>
+          <input type="number" min=0 max=1440 id="minutes" name="minutes" required></input>
         </div>
         <div class="seconds-input">
           <p>Seconds</p>
-          <input></input>
+          <input type="number" min=0 max=59 id="seconds" name="seconds" required></input>
         </div>
       </div>
      </section>
     <button class="start-button">START ACTIVITY</button>
-    </div> 
+    </form>
   </div>
   <aside>
     <h2>Past Activities</h2>
@@ -55,3 +62,5 @@
  <script src="./main.js"></script>
 </body>
 </html>
+
+
