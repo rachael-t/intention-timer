@@ -27,7 +27,7 @@
       <section class="category-inputs">
         <div class="accomplish-input">
           <p>What would you like to accomplish during this time?</p>
-          <input type="text" id="accomplish" name="accomplish"  required></input>
+          <input type="text" id="accomplish" name="accomplish"></input>
         </div>
         <section class="warning-message">
           <div class="no-warning">
@@ -38,11 +38,11 @@
         <div class="time-inputs">
         <div class="minutes-input">
           <p>Minutes</p>
-          <input type="number" min=0 max=1440 id="minutes" name="minutes" required></input>
+          <input min=0 max=1440 id="minutes" name="minutes"></input>
         </div>
         <div class="seconds-input">
           <p>Seconds</p>
-          <input type="number" min=0 max=59 id="seconds" name="seconds" required></input>
+          <input type="number" pattern="\d+" min=0 max=59 id="seconds" name="seconds"></input>
         </div>
       </div>
      </section>
