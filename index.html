@@ -40,18 +40,18 @@
           <p>Minutes</p>
           <input min=0 max=1440 id="minutes" name="minutes"></input>
         <!-- ADDED THIS THING -->
-        <div class="no-warning-minutes">
+        <div id="no-warning-minutes">
           <img src="./assets/warning.svg" alt="warning sign">
-          <p>Number of minutes is required.</p>
+          <p id="minutes-message">Number of minutes is required.</p>
           </div>
         </div>
         <div class="seconds-input">
           <p>Seconds</p>
           <input type="number" pattern="\d+" min=0 max=59 id="seconds" name="seconds"></input>
         <!-- ADDED THIS OTHER THING -->
-        <div class="no-warning-seconds">
+        <div id="no-warning-seconds">
           <img src="./assets/warning.svg" alt="warning sign">
-          <p>Number of seconds is required.</p>
+          <p id="seconds-message">Number of seconds is required.</p>
           </div>
         </div>
         
