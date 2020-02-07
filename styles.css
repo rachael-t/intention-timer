@@ -1,3 +1,4 @@
+/* UNIVERSAL STYLING */
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -20,11 +21,11 @@ h1 {
     padding: 16px 0px;
 }
 
-h1, button, img, .categories, .cat-shell {
+h1, button, img, .categories, .activity-page {
     background-color: #46424D;
 }
 
-.new-activity-page {
+.main-page {
     display: flex;
     background: #2B2733;
     width: 100%;
@@ -37,7 +38,8 @@ h2 {
     margin: 35px 40px;
 }
 
-.cat-shell {
+/* ACTIVTY PAGE LOG */
+.activity-page {
     color: #fff;
     margin: 80px 40px 40px 40px;
     width: 59%;
@@ -159,6 +161,12 @@ input {
     align-self: flex-end;
 }
 
+/* TIMER PAGE LOG */
+.hidden {
+  display: none;
+}
+
+/* ASIDE ACTIVITY LOG */
 aside {
     display: flex;
     flex-direction: row;
@@ -208,9 +216,9 @@ aside {
 
 
 
-/* TIMER CAT SHELL BLANK PAGE STYLING: */
+/* CAT SHELL BLANK PAGE STYLING: */
 
-/* .timer-cat-shell {
+/* .cat-shell(OLD NAME) {
     display: none;
     margin: 80px 40px 40px 40px;
     width: 59%;
