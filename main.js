@@ -88,8 +88,17 @@ function showSecWarning() {
 };
 
 
+//Function for switching pages when start button is click
+var timerPage = document.querySelector('.timer-page');
+var activityPage = document.querySelector('.activity-page');
+var startButton = document.querySelector('.start-button');
 
+startButton.addEventListener('click', handlePageSwitch)
 
+function handlePageSwitch() {
+  activityPage.classList.add('hidden');
+  timerPage.classList.remove('hidden');
+};
 
 
 // var handleWarningMessage = document.getElementsByClassName('.warning-message');
@@ -132,23 +141,6 @@ function showSecWarning() {
 
 
 // NEW STUFF ATTEMPT:
-
-// var timerPage = document.getElementsByClassName('timer-cat-shell');
-// var mainPage = document.getElementsByClassName('cat-shell');
-// var mainButton = document.getElementsByClassName('start-button');
-
-// startButton.addEventListener('click', handleStartButton)
-
-// function handleStartButton(e) {
-//   clickStartButton.classList.hide('.cat-shell');
-
-//   if(e.target.matches('mainButton')) {
-//       e.target.classList.style.display.block('timer-cat-shell');
-//       e.target.classList.style.display.none('cat-shell');
-//   }
-// }
-// double check
-//document.getElementByClassName("warning-message").style.display = "none";
 
 
 
