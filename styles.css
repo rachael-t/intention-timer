@@ -100,10 +100,10 @@ input {
     margin: 0px 5px 0px 0px;
 }
 
+/* HIDDEN BUTTON STYLING */
 .no-warning {
     display: none;
 }
-
 
 .accomplish-input {
     flex: 0 1 100%;
@@ -121,11 +121,34 @@ input {
 .minutes-input {
     flex: 1;
     padding: 0px 150px 0px 0px;
+}
 
+/* HIDDEN BUTTON 2 STYLING */
+
+#no-warning-minutes {
+    display: flex;
+    color: #EFB7EC;
+}
+
+#no-warning-minutes img {
+    width: 15px;
+    margin: 0px 5px 0px 0px;
 }
 
 .seconds-input {
     flex: 1;
+}
+
+/* HIDDEN BUTTON 3 STYLING */
+
+#no-warning-seconds {
+    display: flex;
+    color: #EFB7EC;
+}
+
+#no-warning-seconds img {
+    width: 15px;
+    margin: 0px 5px 0px 0px;
 }
 
 .start-button {
@@ -170,6 +193,19 @@ aside {
     color: #FD8078;
     border-color: #FD8078;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* TIMER CAT SHELL BLANK PAGE STYLING: */
