@@ -101,7 +101,7 @@ input {
 }
 
 /* HIDDEN BUTTON STYLING */
-.no-warning {
+.no-warning, #no-warning-minutes, #no-warning-seconds {
     display: none;
 }
 
@@ -125,12 +125,12 @@ input {
 
 /* HIDDEN BUTTON 2 STYLING */
 
-#no-warning-minutes {
+.warning-minutes {
     display: flex;
     color: #EFB7EC;
 }
 
-#no-warning-minutes img {
+.warning-minutes img {
     width: 15px;
     margin: 0px 5px 0px 0px;
 }
@@ -141,12 +141,12 @@ input {
 
 /* HIDDEN BUTTON 3 STYLING */
 
-#no-warning-seconds {
+.warning-seconds {
     display: flex;
     color: #EFB7EC;
 }
 
-#no-warning-seconds img {
+.warning-seconds img {
     width: 15px;
     margin: 0px 5px 0px 0px;
 }
@@ -215,9 +215,9 @@ aside {
     margin: 80px 40px 40px 40px;
     width: 59%;
      color: #fff;
-    for dramatic purposes 
+    for dramatic purposes
     background-color: black; */
-    
+
 
 
 
