@@ -45,17 +45,9 @@ function displayColorExercise() {
 };
 
 
-// get var for start-button class
-// get var for warning-message class
-// get var for no-warning class
-
-
+// Warning message below input fields
 var accomplishInput = document.getElementById('accomplish');
 var clickStart = document.querySelector('.start-button');
-
-//FOR CARLOS: I left these here, but since I defined them in the functions below, we could remove. Kept them as I worked through the functions.
-// var minInput = document.getElementById('minutes');
-// var secInput = document.getElementById('seconds');
 
 clickStart.addEventListener('click', showWarning)
 
@@ -92,13 +84,43 @@ function showSecWarning() {
 var timerPage = document.querySelector('.timer-page');
 var activityPage = document.querySelector('.activity-page');
 var startButton = document.querySelector('.start-button');
+var newActivityHeader = document.querySelector('.new-activity-header');
+var currentActivityHeader = document.querySelector('.current-activity-header');
 
 startButton.addEventListener('click', handlePageSwitch)
 
 function handlePageSwitch() {
   activityPage.classList.add('hidden');
   timerPage.classList.remove('hidden');
+  newActivityHeader.classList.add('hidden');
+  currentActivityHeader.classList.remove('hidden');
 };
+
+
+// Rachael's attempt at input field transfer
+// In html:
+// For this example I will be using the "what do you want to accomplish" field. First, need to add an ID to the input field. Example could be id="user-input-accomplish". We would then need to add an ID to where the information is going to move to, so in the new timer-page create an empty p element with span added <p><span id='accomplish-display'></span></p>.
+// I think we need to add to the start button onclick="showAccomplishInput();" so that when the button is click, it knows to run the following function.
+// In JavaScript:
+// function showAccomplishInput() {
+//   document.getElementById('accomplish-display').innerHTML = document.getElementById('user-input-accomplish').value; }
+//
+// Scoping out for all three (need to figure out category selection):
+// function showInput() {
+//   document.getElementById('accomplish-display').innerHTML = document.getElementById('user-input-accomplish').value;
+//
+//   document.getElementById('minutes-display').innerHTML = document.getElementById('user-input-minutes').value;
+//
+//   document.getElementById('seconds-display').innerHTML = document.getElementById('user-input-seconds').value;
+// }
+// all of this may need to be included with the warning if statements - if all of the fields have inputs, then run this function.
+
+
+
+
+
+
+
 
 
 // var handleWarningMessage = document.getElementsByClassName('.warning-message');

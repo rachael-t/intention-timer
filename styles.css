@@ -21,7 +21,7 @@ h1 {
     padding: 16px 0px;
 }
 
-h1, button, img, .categories, .activity-page {
+h1, button, img, .categories, .activity-page, .current-activity-timer {
     background-color: #46424D;
 }
 
@@ -44,13 +44,13 @@ p {
 }
 
 /* ACTIVTY PAGE LOG */
-.activity-page {
+.activity-page, .timer-page {
     color: #fff;
     margin: 80px 40px 40px 40px;
     width: 59%;
 }
 
-.categories {
+.categories, .current-activity-timer {
     display: flex;
     flex-direction: column;
     height: 90%;
@@ -176,6 +176,7 @@ input {
 .hidden {
   display: none;
 }
+
 
 /* ASIDE ACTIVITY LOG */
 aside {
