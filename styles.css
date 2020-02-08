@@ -17,7 +17,7 @@ h1 {
     justify-content: center;
     color: #fff;
     margin: 0px;
-    font-size: 22px;
+    font-size: 26px;
     padding: 16px 0px;
 }
 
@@ -36,6 +36,11 @@ h2 {
     color: #CBC9CF;
     position: absolute;
     margin: 35px 40px;
+    font-size: 24px;
+}
+
+p {
+  font-size: 18px;
 }
 
 /* ACTIVTY PAGE LOG */
@@ -70,7 +75,7 @@ img {
     color: #fff;
     width: 150px;
     height: 70px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 input {
@@ -78,6 +83,8 @@ input {
     background: none;
     border: none;
     border-bottom: 1px solid #fff;
+    font-size: 16px;
+    color: #CBC9CF;
 }
 
 .category-inputs {
@@ -92,9 +99,9 @@ input {
     width: 50%;
 }
 
-.warning-message img, p {
+.warning-message img, .warning-message p, #minutes-message, #seconds-message {
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .warning-message img {
@@ -117,7 +124,7 @@ input {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0px 0px 60px 0px;
+    /* margin: 0px 0px 60px 0px; */
 }
 
 .minutes-input {
@@ -130,9 +137,11 @@ input {
 .warning-minutes {
     display: flex;
     color: #EFB7EC;
+    font-size: 13px;
 }
 
 .warning-minutes img {
+    display: inline-block;
     width: 15px;
     margin: 0px 5px 0px 0px;
 }
@@ -149,6 +158,7 @@ input {
 }
 
 .warning-seconds img {
+    display: inline-block;
     width: 15px;
     margin: 0px 5px 0px 0px;
 }
@@ -159,6 +169,7 @@ input {
     padding: 9px 40px 9px 40px;
     border-radius: 3px 3px;
     align-self: flex-end;
+    margin-top: 70px;
 }
 
 /* TIMER PAGE LOG */
