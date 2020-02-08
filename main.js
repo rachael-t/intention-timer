@@ -12,18 +12,15 @@
 
 
 
-// BUTTON RESPONSE SKETCH:
-// VARIABLES
+// BUTTON RESPONSE:
 var clickStudy = document.querySelector('.study-button');
 var clickMeditate = document.querySelector('.meditate-button');
 var clickExercise = document.querySelector('.exercise-button');
 
-// event listeners
 clickStudy.addEventListener('click', displayColorStudy)
 clickMeditate.addEventListener('click', displayColorMeditate)
 clickExercise.addEventListener('click', displayColorExercise)
 
-// fn
 function displayColorStudy() {
     clickStudy.innerHTML = `<button class="activity-button study-button study-active">
           <img src="./assets/study-active.svg"
@@ -97,6 +94,9 @@ function handlePageSwitch() {
 };
 
 
+
+
+
 // Rachael's attempt at input field transfer
 // In html:
 // For this example I will be using the "what do you want to accomplish" field. First, need to add an ID to the input field. Example could be id="user-input-accomplish". We would then need to add an ID to where the information is going to move to, so in the new timer-page create an empty p element with span added <p><span id='accomplish-display'></span></p>.
@@ -106,6 +106,7 @@ function handlePageSwitch() {
 //   document.getElementById('accomplish-display').innerHTML = document.getElementById('user-input-accomplish').value; }
 //
 // Scoping out for all three (need to figure out category selection):
+
 // function showInput() {
 //   document.getElementById('accomplish-display').innerHTML = document.getElementById('user-input-accomplish').value;
 //
@@ -113,123 +114,5 @@ function handlePageSwitch() {
 //
 //   document.getElementById('seconds-display').innerHTML = document.getElementById('user-input-seconds').value;
 // }
+
 // all of this may need to be included with the warning if statements - if all of the fields have inputs, then run this function.
-
-
-
-
-
-
-
-
-
-// var handleWarningMessage = document.getElementsByClassName('.warning-message');
-// var handleNoWarning = document.getElementsByClassName('.no-warning');
-
-
-
-
-
-
-// function showWarning() {
-//    if(accomplishInput.value.length === 0) {
-//        handleWarningMessage.disabled = true;
-//        console.log('nothing is there');
-//    }
-// }
-
-// if(accomplishInput.value.length === "") {
-//     handleNoWarning.display.style = "block";
-// }
-
-// get start button
-// var minutesInput = document.querySelector('.second-input');
-
-// var minutesObject {
-//     input: 1...60;
-
-// }
-
-// add function to only accept integers without e
-
-
-// var
-
-// funtion numVerify() {
-//     if (minutesInput)
-// }
-
-
-
-
-// NEW STUFF ATTEMPT:
-
-
-
-
-
-// if(e.target.matches('ul')) {
-    //     e.target.classList.add("blue-border");
-    //   }
-
-
-
-
-
-
-
-
-// SPECS:
-// Study: #B3FD78
-// Meditate: #C278FD
-// Exercise: #FD8078
-// Error: #EFB7EC
-
-// OTHER IDEAS:
-// idea for h1 to be a home button
-// Past Activities default message can be
-// a if/else statement
-
-// User Story:
-// - User selects category
-// - User types information in accomplish-input field
-// - User types amount of minutes into input field. Data is verified by validating function.
-// - User types amount of seconds into input field. Data is verified by validating function.
-// Variables:
-// accomplish-input
-// minutes-input
-// seconds-input
-// example: var seconds = document.querySelector('.seconds-input input')
-// querySelector
-// getElementsByClassName -- then our input fields could all have the same class name and we take/verify that info at once
-// querySelectorAll (pg 193)
-// need to add in classes for the actual input element for the two variables being targeted.
-// class = "minutes"
-// class = "seconds"
-// FUNCTION:
-// (study method that filters function?)
-// Idea 1:
-// if input.value > 0 || input.value < 59
-// return
-// else return alert "need to be number"
-// (issues with this idea - too many assumptions - not specific enough)
-// Idea 2:
-// using pages 607 - 610 in JS book
-// HTML5 element required = true/false
-// Where testing true/false against number value
-// function validateRequired () {
-//   isEmpty ()
-// }
-// in the <input> tag for HTML add in required
-// object to validate data type
-// look into .filter()
-// pg 139
-// 132 - method: isNan() checks if the value is not a number
-
-
-
-// p.124 - could use window.alerg() method to create a dialog box with
-// error message that has to be click before continuing with submit
-
-// p.126 could use a document.createElement() method to create a text in red that alerts
-// the user that the input is invalid.

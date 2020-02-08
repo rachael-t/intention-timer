@@ -21,7 +21,7 @@ h1 {
     padding: 16px 0px;
 }
 
-h1, button, img, .categories, .activity-page, .current-activity-timer {
+h1, button, img, .categories, .activity-page, .timer-page {
     background-color: #46424D;
 }
 
@@ -177,6 +177,31 @@ input {
   display: none;
 }
 
+#accomplish-display, #minutes-display, #seconds-display{
+  border: 1px solid white;
+}
+
+#accomplish-display {
+  justify-content: flex-start;
+}
+
+#minutes-display, #seconds-display {
+  justify-content: center;
+}
+
+#initiate-timer {
+  border-radius: 50%;
+  border: 2px solid white;
+  flex: 2;
+  width: 200px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.current-activity-timer {
+  align-items: center;
+  margin: 6px 70px 80px 70px;
+}
 
 /* ASIDE ACTIVITY LOG */
 aside {
