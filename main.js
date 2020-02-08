@@ -24,22 +24,45 @@ clickExercise.addEventListener('click', displayColorExercise)
 function displayColorStudy() {
     clickStudy.innerHTML = `<button class="activity-button study-button study-active">
           <img src="./assets/study-active.svg"
-          alt="study activate logo">Study</button>`
+          alt="study activate logo">Study</button>`;
+    clickMeditate.innerHTML =`
+    <button class="activity-button meditate-button">
+          <img src="./assets/meditate.svg"
+          alt="meditate logo">Meditate</button>`;
+    clickExercise.innerHTML =`
+    <button class="activity-button exercise-button">
+          <img src="./assets/exercise.svg"
+          alt="exercise logo">Exercise</button>`;
 };
 
 function displayColorMeditate() {
     clickMeditate.innerHTML =`
     <button class="activity-button meditate-button meditate-active">
           <img src="./assets/meditate-active.svg"
-          alt="meditate activate logo">Meditate</button>`
+          alt="meditate activate logo">Meditate</button>`;
+    clickStudy.innerHTML = `<button class="activity-button study-button">
+          <img src="./assets/study.svg"
+          alt="study logo">Study</button>`;
+    clickExercise.innerHTML =`
+    <button class="activity-button exercise-button">
+          <img src="./assets/exercise.svg"
+          alt="exercise logo">Exercise</button>`;
 };
 
 function displayColorExercise() {
     clickExercise.innerHTML =`
     <button class="activity-button exercise-button exercise-active">
           <img src="./assets/exercise-active.svg"
-          alt="exercise activate logo">Exercise</button>`
+          alt="exercise activate logo">Exercise</button>`;
+    clickStudy.innerHTML = `<button class="activity-button study-button">
+          <img src="./assets/study.svg"
+          alt="study logo">Study</button>`;
+    clickMeditate.innerHTML =`
+    <button class="activity-button meditate-button">
+          <img src="./assets/meditate.svg"
+          alt="meditate logo">Meditate</button>`;          
 };
+
 
 
 // Warning message below input fields
@@ -47,7 +70,6 @@ var accomplishInput = document.getElementById('accomplish');
 var clickStart = document.querySelector('.start-button');
 
 clickStart.addEventListener('click', showWarning)
-
 
 function showWarning() {
     if(accomplishInput.value === "") {
@@ -94,6 +116,26 @@ function handlePageSwitch() {
 };
 
 
+//sketch for category
+
+
+
+
+//SKETCH FOR LOOP WHEN CHANGING PAGE:
+// startButton.addEventListener('click', changePage)
+//
+// function changePage () {
+//   var inputList = [categorySelection, accomplishInput, minInput, secInput]
+//   for (var i = 0; i < inputList.length; i++)
+//     if (inputList[i] = true) {}
+//     handlePageSwitch()
+//   }
+// }
+// would require handlePageSwitch eventListener to be removed
+
+
+
+
 
 
 
@@ -116,3 +158,31 @@ function handlePageSwitch() {
 // }
 
 // all of this may need to be included with the warning if statements - if all of the fields have inputs, then run this function.
+
+//Rachael's ATTEMPT to loop through select at least one category - lots of issue with this logic but it was a try
+// var allCategoryButtons = document.querySelectorAll('.activity-button');
+//
+// allCategoryButtons.addEventListener('click', categorySelected);
+//
+// function categorySelected() {
+//   allCategoryButtons = 0;
+//   for(var i = 0; i < allCategoryButtons.length; i++) {
+//     if (allCategoryButtons[i].value = '.study-button') {
+//       clickStudy.innerHTML = `<button class="activity-button study-button study-active">
+//             <img src="./assets/study-active.svg"
+//             alt="study activate logo">Study</button>`;
+//     } if (allCategoryButtons[i].value = '.meditate-button') {
+//       clickMeditate.innerHTML =`
+//       <button class="activity-button meditate-button meditate-active">
+//             <img src="./assets/meditate-active.svg"
+//             alt="meditate activate logo">Meditate</button>`;
+//     } if (allCategoryButtons[i].value = '.exercise-button') {
+//       clickExercise.innerHTML =`
+//       <button class="activity-button exercise-button exercise-active">
+//             <img src="./assets/exercise-active.svg"
+//             alt="exercise activate logo">Exercise</button>`;
+//     } else {
+//       alert('Please select a category');
+//     }
+//   }
+// };
