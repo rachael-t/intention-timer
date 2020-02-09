@@ -6,16 +6,17 @@ var buttonSelected = "";
 var categoryWarning = document.querySelector('#category-warning');
 var accomplishInput = document.getElementById('accomplish');
 var clickStart = document.querySelector('.start-button');
+var timerPage = document.querySelector('.timer-page');
+var activityPage = document.querySelector('.activity-page');
+var newActivityHeader = document.querySelector('.new-activity-header');
+var currentActivityHeader = document.querySelector('.current-activity-header');
 
 // Event Listeners
 clickStudy.addEventListener('click', displayColorStudy)
 clickMeditate.addEventListener('click', displayColorMeditate)
 clickExercise.addEventListener('click', displayColorExercise)
 categoryWarning.addEventListener('load', hideCategoryWarning)
-clickStart.addEventListener('click', showCategoryWarning)
-clickStart.addEventListener('click', showWarning)
-clickStart.addEventListener('click', showMinWarning)
-clickStart.addEventListener('click', showSecWarning)
+clickStart.addEventListener('click', handlePageSwitch)
 
 // Functions:
 function displayColorStudy() {
@@ -68,58 +69,36 @@ function hideCategoryWarning() {
       console.log('cat is hidden');
 };
 
-function showCategoryWarning() {
-      if(buttonSelected === "") {
-        document.getElementById('category-warning').style.visibility = "visible";
-        console.log('cat should be visible');
-      }
-};
-
-function showWarning() {
-    if(accomplishInput.value === "") {
-    var handleNoWarning = document.querySelector('.no-warning')
-    handleNoWarning.style.display = "block";
-    }
-};
-
-function showMinWarning() {
-    var minInput = document.forms["intention-form"]["minutes"].value;
-    if(isNaN(minInput)) {
-    var handleNoWarningMinutes = document.querySelector('#no-warning-minutes')
-    handleNoWarningMinutes.style.display = "block";
-    }
-};
-
-function showSecWarning() {
-    var secInput = document.forms["intention-form"]["seconds"].value;
-    if(isNaN(secInput)) {
-    var handleNoWarningSeconds = document.querySelector('#no-warning-seconds')
-    handleNoWarningSeconds.style.display = "block";
-    }
-};
-
-// Function for switching pages when start button is click
-var timerPage = document.querySelector('.timer-page');
-var activityPage = document.querySelector('.activity-page');
-var startButton = document.querySelector('.start-button');
-var newActivityHeader = document.querySelector('.new-activity-header');
-var currentActivityHeader = document.querySelector('.current-activity-header');
-
-startButton.addEventListener('click', handlePageSwitch)
-
 function handlePageSwitch() {
-  activityPage.classList.add('hidden');
-  timerPage.classList.remove('hidden');
-  newActivityHeader.classList.add('hidden');
-  currentActivityHeader.classList.remove('hidden');
+      var isSelect = true;
+      var isFilled = true;
+      var hasMin = true;
+      var hasSec = true;
+      if(buttonSelected === "") {
+      document.getElementById('category-warning').style.visibility = "visible";
+      isSelect = false;
+      }
+      if(accomplishInput.value === "") {
+      var handleNoWarning = document.querySelector('.no-warning')
+      handleNoWarning.style.display = "block";
+            isFilled = false;
+      } 
+      var minInput = document.forms["intention-form"]["minutes"].value;
+      if(isNaN(minInput)) {
+       var handleNoWarningMinutes = document.querySelector('#no-warning-minutes')
+      handleNoWarningMinutes.style.display = "block";
+      hasMin = false;
+      }
+      var secInput = document.forms["intention-form"]["seconds"].value;
+      if(isNaN(secInput)) {
+      var handleNoWarningSeconds = document.querySelector('#no-warning-seconds')
+      handleNoWarningSeconds.style.display = "block";
+      hasSec = false;
+      }
+      else if(isSelect && isFilled && hasMin && hasSec) {
+      activityPage.classList.add('hidden');
+      timerPage.classList.remove('hidden');
+      newActivityHeader.classList.add('hidden');
+      currentActivityHeader.classList.remove('hidden');
+      };
 };
-
-// Sketch for Input Transfer
-// var accomplishInput = document.querySelector('#accomplish');
-// var accDisplay = document.querySelector('#accomplish-display');
-
-// startButton.addEventListener('click', getInput)
-
-// function getInput() {
-//     accomplishInput.innerText = accDisplay.value;
-// }
