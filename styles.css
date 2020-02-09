@@ -1,3 +1,4 @@
+/* UNIVERSAL STYLING */
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -16,15 +17,15 @@ h1 {
     justify-content: center;
     color: #fff;
     margin: 0px;
-    font-size: 22px;
+    font-size: 26px;
     padding: 16px 0px;
 }
 
-h1, button, img, .categories, .cat-shell {
+h1, button, img, .categories, .activity-page, .timer-page {
     background-color: #46424D;
 }
 
-.new-activity-page {
+.main-page {
     display: flex;
     background: #2B2733;
     width: 100%;
@@ -35,15 +36,21 @@ h2 {
     color: #CBC9CF;
     position: absolute;
     margin: 35px 40px;
+    font-size: 24px;
 }
 
-.cat-shell {
+p {
+  font-size: 18px;
+}
+
+/* ACTIVTY PAGE LOG */
+.activity-page, .timer-page {
     color: #fff;
     margin: 80px 40px 40px 40px;
     width: 59%;
 }
 
-.categories {
+.categories, .current-activity-timer {
     display: flex;
     flex-direction: column;
     height: 90%;
@@ -68,7 +75,7 @@ img {
     color: #fff;
     width: 150px;
     height: 70px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 input {
@@ -76,6 +83,8 @@ input {
     background: none;
     border: none;
     border-bottom: 1px solid #fff;
+    font-size: 16px;
+    color: #CBC9CF;
 }
 
 .category-inputs {
@@ -83,10 +92,31 @@ input {
     flex-wrap: wrap;
 }
 
+.warning-message {
+    color: #EFB7EC;
+    margin: 5px 0px 0px 0px;
+    height: 15%;
+    width: 50%;
+}
+
+.warning-message img, .warning-message p, #minutes-message, #seconds-message {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.warning-message img {
+    width: 15px;
+    margin: 0px 5px 0px 0px;
+}
+
+/* HIDDEN BUTTON STYLING */
+.no-warning, #no-warning-minutes, #no-warning-seconds {
+    display: none;
+}
+
 .accomplish-input {
     flex: 0 1 100%;
-    margin: 45px 0px;
-
+    margin: 45px 0px 0px 0px;
 }
 
 .time-inputs {
@@ -94,17 +124,43 @@ input {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0px 0px 60px 0px;
+    /* margin: 0px 0px 60px 0px; */
 }
 
 .minutes-input {
     flex: 1;
     padding: 0px 150px 0px 0px;
+}
 
+/* HIDDEN BUTTON 2 STYLING */
+
+.warning-minutes {
+    display: flex;
+    color: #EFB7EC;
+    font-size: 13px;
+}
+
+.warning-minutes img {
+    display: inline-block;
+    width: 15px;
+    margin: 0px 5px 0px 0px;
 }
 
 .seconds-input {
     flex: 1;
+}
+
+/* HIDDEN BUTTON 3 STYLING */
+
+.warning-seconds {
+    display: flex;
+    color: #EFB7EC;
+}
+
+.warning-seconds img {
+    display: inline-block;
+    width: 15px;
+    margin: 0px 5px 0px 0px;
 }
 
 .start-button {
@@ -113,8 +169,41 @@ input {
     padding: 9px 40px 9px 40px;
     border-radius: 3px 3px;
     align-self: flex-end;
+    margin-top: 70px;
 }
 
+/* TIMER PAGE LOG */
+.hidden {
+  display: none;
+}
+
+#accomplish-display, #minutes-display, #seconds-display{
+  border: 1px solid white;
+}
+
+#accomplish-display {
+  justify-content: flex-start;
+}
+
+#minutes-display, #seconds-display {
+  justify-content: center;
+}
+
+#initiate-timer {
+  border-radius: 50%;
+  border: 2px solid white;
+  flex: 2;
+  width: 200px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.current-activity-timer {
+  align-items: center;
+  margin: 6px 70px 80px 70px;
+}
+
+/* ASIDE ACTIVITY LOG */
 aside {
     display: flex;
     flex-direction: row;
@@ -149,6 +238,40 @@ aside {
     color: #FD8078;
     border-color: #FD8078;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CAT SHELL BLANK PAGE STYLING: */
+
+/* .cat-shell(OLD NAME) {
+    display: none;
+    margin: 80px 40px 40px 40px;
+    width: 59%;
+     color: #fff;
+    for dramatic purposes
+    background-color: black; */
+
+
+
+
+
+
+
+
+
+
 
 
 /* SPECS:
