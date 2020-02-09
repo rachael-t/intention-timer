@@ -16,6 +16,7 @@
 var clickStudy = document.querySelector('.study-button');
 var clickMeditate = document.querySelector('.meditate-button');
 var clickExercise = document.querySelector('.exercise-button');
+var buttonSelected = "";
 
 clickStudy.addEventListener('click', displayColorStudy)
 clickMeditate.addEventListener('click', displayColorMeditate)
@@ -33,6 +34,7 @@ function displayColorStudy() {
     <button class="activity-button exercise-button">
           <img src="./assets/exercise.svg"
           alt="exercise logo">Exercise</button>`;
+    buttonSelected = "study";
 };
 
 function displayColorMeditate() {
@@ -47,6 +49,7 @@ function displayColorMeditate() {
     <button class="activity-button exercise-button">
           <img src="./assets/exercise.svg"
           alt="exercise logo">Exercise</button>`;
+    buttonSelected = "meditate";
 };
 
 function displayColorExercise() {
@@ -60,14 +63,25 @@ function displayColorExercise() {
     clickMeditate.innerHTML =`
     <button class="activity-button meditate-button">
           <img src="./assets/meditate.svg"
-          alt="meditate logo">Meditate</button>`;          
+          alt="meditate logo">Meditate</button>`;
+    buttonSelected = "exercise";
 };
 
 
 
-// Warning message below input fields
+// Warning message below category/input fields
 var accomplishInput = document.getElementById('accomplish');
 var clickStart = document.querySelector('.start-button');
+
+clickStart.addEventListener('click', showCategoryWarning)
+
+function showCategoryWarning() {
+  //add something here? current error message is Cannot set property 'visibility' of undefined
+  if(buttonSelected === "") {
+    document.getElementsByClassName('category-warning').style.visibility = "hidden";
+    console.log('It is working');
+  }
+};
 
 clickStart.addEventListener('click', showWarning)
 
@@ -99,24 +113,24 @@ function showSecWarning() {
 };
 
 
+
+
 //Function for switching pages when start button is click
-var timerPage = document.querySelector('.timer-page');
-var activityPage = document.querySelector('.activity-page');
-var startButton = document.querySelector('.start-button');
-var newActivityHeader = document.querySelector('.new-activity-header');
-var currentActivityHeader = document.querySelector('.current-activity-header');
+// var timerPage = document.querySelector('.timer-page');
+// var activityPage = document.querySelector('.activity-page');
+// var startButton = document.querySelector('.start-button');
+// var newActivityHeader = document.querySelector('.new-activity-header');
+// var currentActivityHeader = document.querySelector('.current-activity-header');
+//
+// startButton.addEventListener('click', handlePageSwitch)
+//
+// function handlePageSwitch() {
+//   activityPage.classList.add('hidden');
+//   timerPage.classList.remove('hidden');
+//   newActivityHeader.classList.add('hidden');
+//   currentActivityHeader.classList.remove('hidden');
+// };
 
-startButton.addEventListener('click', handlePageSwitch)
-
-function handlePageSwitch() {
-  activityPage.classList.add('hidden');
-  timerPage.classList.remove('hidden');
-  newActivityHeader.classList.add('hidden');
-  currentActivityHeader.classList.remove('hidden');
-};
-
-
-//sketch for category
 
 
 
