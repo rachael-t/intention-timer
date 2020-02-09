@@ -99,22 +99,20 @@ function showSecWarning() {
 };
 
 // Function for switching pages when start button is click
-// var timerPage = document.querySelector('.timer-page');
-// var activityPage = document.querySelector('.activity-page');
-// var startButton = document.querySelector('.start-button');
-// var newActivityHeader = document.querySelector('.new-activity-header');
-// var currentActivityHeader = document.querySelector('.current-activity-header');
+var timerPage = document.querySelector('.timer-page');
+var activityPage = document.querySelector('.activity-page');
+var startButton = document.querySelector('.start-button');
+var newActivityHeader = document.querySelector('.new-activity-header');
+var currentActivityHeader = document.querySelector('.current-activity-header');
 
-// startButton.addEventListener('click', handlePageSwitch)
+startButton.addEventListener('click', handlePageSwitch)
 
-// startButton.addEventListener('click', handlePageSwitch)
-
-// function handlePageSwitch() {
-//   activityPage.classList.add('hidden');
-//   timerPage.classList.remove('hidden');
-//   newActivityHeader.classList.add('hidden');
-//   currentActivityHeader.classList.remove('hidden');
-// };
+function handlePageSwitch() {
+  activityPage.classList.add('hidden');
+  timerPage.classList.remove('hidden');
+  newActivityHeader.classList.add('hidden');
+  currentActivityHeader.classList.remove('hidden');
+};
 
 // Sketch for Input Transfer
 // var accomplishInput = document.querySelector('#accomplish');
