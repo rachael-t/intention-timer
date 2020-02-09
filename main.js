@@ -10,6 +10,7 @@ var timerPage = document.querySelector('.timer-page');
 var activityPage = document.querySelector('.activity-page');
 var newActivityHeader = document.querySelector('.new-activity-header');
 var currentActivityHeader = document.querySelector('.current-activity-header');
+var timerButton = document.querySelector('#initiate-timer');
 
 // Event Listeners
 clickStudy.addEventListener('click', displayColorStudy)
@@ -17,6 +18,7 @@ clickMeditate.addEventListener('click', displayColorMeditate)
 clickExercise.addEventListener('click', displayColorExercise)
 categoryWarning.addEventListener('load', hideCategoryWarning)
 clickStart.addEventListener('click', handlePageSwitch)
+clickStart.addEventListener('click', timerColor)
 
 // Functions:
 function displayColorStudy() {
@@ -101,4 +103,14 @@ function handlePageSwitch() {
       newActivityHeader.classList.add('hidden');
       currentActivityHeader.classList.remove('hidden');
       };
+};
+
+function timerColor() {
+  if(buttonSelected === "study") {
+    timerButton.style.border="2px solid #B3FD78"
+  } else if (buttonSelected === "meditate") {
+    timerButton.style.border="2px solid #C278FD"
+  } else if (buttonSelected === "exercise") {
+    timerButton.style.border="2px solid #FD8078"
+  }
 };
