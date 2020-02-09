@@ -114,3 +114,13 @@ function timerColor() {
     timerButton.style.border="2px solid #FD8078"
   }
 };
+
+// Sketch for Input Transfer
+var accomplishInput = document.querySelector('#accomplish');
+var accDisplay = document.querySelector('#accomplish-display');
+
+clickStart.addEventListener('click', getInput)
+
+function getInput() {
+      accDisplay.innerText = accomplishInput.value;
+}
