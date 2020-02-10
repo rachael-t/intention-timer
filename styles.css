@@ -178,7 +178,7 @@ input {
 }
 
 /* remember to maybe not have width and height here */
-#accomplish-display, #minutes-display, #seconds-display{
+#accomplish-display, #time-display{
   border: 1px solid white;
   width: 200px;
   height: 100px;
@@ -188,7 +188,7 @@ input {
   justify-content: flex-start;
 }
 
-#minutes-display, #seconds-display {
+#time-display {
   justify-content: center;
 }
 
