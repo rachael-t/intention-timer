@@ -11,14 +11,21 @@ var activityPage = document.querySelector('.activity-page');
 var newActivityHeader = document.querySelector('.new-activity-header');
 var currentActivityHeader = document.querySelector('.current-activity-header');
 var timerButton = document.querySelector('#initiate-timer');
+var accomplishInput = document.querySelector('#accomplish');
+var accDisplay = document.querySelector('#accomplish-display');
+var timeDisplay = document.querySelector('#time-display');
+var minInput = document.querySelector('#minutes');
+var secInput = document.querySelector('#seconds');
+
 
 // Event Listeners
 clickStudy.addEventListener('click', displayColorStudy)
 clickMeditate.addEventListener('click', displayColorMeditate)
 clickExercise.addEventListener('click', displayColorExercise)
-categoryWarning.addEventListener('load', hideCategoryWarning)
+window.addEventListener('load', hideCategoryWarning)
 clickStart.addEventListener('click', handlePageSwitch)
 clickStart.addEventListener('click', timerColor)
+clickStart.addEventListener('click', getInput)
 
 // Functions:
 function displayColorStudy() {
@@ -84,7 +91,7 @@ function handlePageSwitch() {
       var handleNoWarning = document.querySelector('.no-warning')
       handleNoWarning.style.display = "block";
             isFilled = false;
-      } 
+      }
       var minInput = document.forms["intention-form"]["minutes"].value;
       if(isNaN(minInput)) {
        var handleNoWarningMinutes = document.querySelector('#no-warning-minutes')
@@ -113,4 +120,11 @@ function timerColor() {
   } else if (buttonSelected === "exercise") {
     timerButton.style.border="2px solid #FD8078"
   }
+};
+
+function getInput() {
+  var timeValue = minInput.value.toString() + ":" + secInput.value.toString();
+  console.log(timeValue);
+  timeDisplay.innerText = timeValue;
+  accDisplay.innerText = accomplishInput.value;
 };

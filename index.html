@@ -5,7 +5,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
   <link href="styles.css" type="text/css" rel="stylesheet" />
 </head>
-<body onload="hideCategoryWarning()">
+<body>
   <h1>INTENTION TIMER</h1>
   <main class="main-page">
     <h2 class="new-activity-header">New Activity</h2>
@@ -69,8 +69,7 @@
     <div class="timer-page hidden">
       <div class="current-activity-timer">
         <p id='accomplish-display'></p>
-
-        <div id="minutes-display seconds-display">05:00</div>
+        <p id="time-display"></p>
         <button id="initiate-timer">START</button>
       </div>
     </div>
@@ -87,4 +86,3 @@
   <script src="./main.js"></script>
 </body>
 </html>
-

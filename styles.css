@@ -177,15 +177,18 @@ input {
   display: none;
 }
 
-#accomplish-display, #minutes-display, #seconds-display{
+/* remember to maybe not have width and height here */
+#accomplish-display, #time-display{
   border: 1px solid white;
+  width: 200px;
+  height: 100px;
 }
 
 #accomplish-display {
   justify-content: flex-start;
 }
 
-#minutes-display, #seconds-display {
+#time-display {
   justify-content: center;
 }
 
@@ -238,6 +241,8 @@ aside {
     color: #FD8078;
     border-color: #FD8078;
 }
+
+
 
 
 
