@@ -14,9 +14,12 @@ var timerButton = document.querySelector('#initiate-timer');
 var accomplishInput = document.querySelector('#accomplish');
 var accDisplay = document.querySelector('#accomplish-display');
 var timeDisplay = document.querySelector('#time-display');
-var minInput = document.querySelector('#minutes');
-var secInput = document.querySelector('#seconds');
-
+var minInput = document.getElementById('minutes');
+var secInput = document.getElementById('seconds');
+var totalTime;
+var timeRemaining = 0;
+var minRemaining = 0;
+var secRemaining = 0;
 
 // Event Listeners
 clickStudy.addEventListener('click', displayColorStudy)
@@ -26,8 +29,11 @@ window.addEventListener('load', hideCategoryWarning)
 clickStart.addEventListener('click', handlePageSwitch)
 clickStart.addEventListener('click', timerColor)
 clickStart.addEventListener('click', getInput)
+timerButton.addEventListener('click', timer)
 
 // Functions:
+
+
 function displayColorStudy() {
   clickStudy.innerHTML = `<button class="activity-button study-button study-active">
     <img src="./assets/study-active.svg"
@@ -122,9 +128,44 @@ function timerColor() {
   }
 };
 
+function timerFinished() {
+  var timerInit = document.querySelector('#initiate-timer');
+  var logAct = document.querySelector('#logging');
+  timerInit.innerText = 'COMPLETE!';
+  if(document.querySelector('#initiate-timer').innerText === 'COMPLETE!') {
+    logAct.classList.remove('hidden');
+  }
+};
+
 function getInput() {
   var timeValue = minInput.value.toString() + ":" + secInput.value.toString();
-  console.log(timeValue);
+  totalTime = Number(minInput.value) * 60 + Number(secInput.value);
   timeDisplay.innerText = timeValue;
   accDisplay.innerText = accomplishInput.value;
+  return totalTime;
+};
+
+function timer(totalTime) {
+  timeRemaining = getInput();
+  document.getElementById('time-display').innerHTML = `
+    <p id="minutes-display"></p>
+    <p id="seconds-display"></p>
+  `;
+  intervalTimer = setInterval(function() {
+    minRemaining = Math.floor(timeRemaining / 60);
+    secRemaining = (timeRemaining % 60);
+    timeRemaining--;
+    if (secRemaining < 0) {
+      clearInterval(intervalTimer);
+      intervalTimer = null;
+      document.getElementById('time-display').innerHTML= "00:00";
+      timerFinished();
+    } else if (secRemaining % 60 < 10) {
+      document.querySelector('#minutes-display').innerHTML= minRemaining;
+      document.querySelector('#seconds-display').innerHTML= ":0" + secRemaining;
+    } else if (secRemaining / 60 < 1) {
+      document.getElementById('minutes-display').innerHTML= `0${minRemaining}`
+      document.getElementById('seconds-display').innerHTML= `:${secRemaining}`;
+    }
+  }, 1000);
 };

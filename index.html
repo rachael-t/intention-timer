@@ -30,7 +30,7 @@
         <section class="category-inputs">
           <div class="accomplish-input">
             <p>What would you like to accomplish during this time?</p>
-            <input type="text" id="accomplish"></input>
+            <input type="text" id="accomplish"/>
 
           </div>
           <section class="warning-message">
@@ -42,7 +42,7 @@
           <div class="time-inputs">
             <div class="minutes-input">
               <p>Minutes</p>
-              <input min=0 max=1440 id="minutes" name="minutes"></input>
+              <input type="number" id="minutes" name="minutes" type="text"/>
               <section class="warning-minutes">
                 <div id="no-warning-minutes">
                   <img src="./assets/warning.svg" alt="warning sign">
@@ -52,7 +52,7 @@
             </div>
             <div class="seconds-input">
               <p>Seconds</p>
-              <input min=0 max=59 id="seconds" name="seconds"></input>
+              <input type="number" id="seconds" name="seconds" type="text"/>
               <section class="warning-seconds">
                 <div id="no-warning-seconds">
                   <img src="./assets/warning.svg" alt="warning sign">
@@ -69,8 +69,12 @@
     <div class="timer-page hidden">
       <div class="current-activity-timer">
         <p id='accomplish-display'></p>
-        <p id="time-display"></p>
+        <div id='time-display'>
+          <p id="minutes-display"></p>
+          <p id="seconds-display"></p>
+        </div>
         <button id="initiate-timer">START</button>
+        <button id="logging" class="hidden">LOG ACTIVITY</button>
       </div>
     </div>
     <aside>
@@ -83,6 +87,6 @@
       </section>
     </aside>
   </main>
-  <script src="./main.js"></script>
 </body>
+  <script src="main.js"></script>
 </html>
