@@ -187,8 +187,12 @@ function handleLog() {
   var timerButt = document.querySelector('#initiate-timer');
   var newAct = document.querySelector('.create-new-act');
   var logButt = document.querySelector('.logging');
+  var defaultChange = document.querySelector('.default-message');
   newAct.classList.remove('hidden');
   logButt.classList.add('hidden');
   timerButt.classList.add('hidden');
   congratsMess.classList.add('hidden');
+  defaultChange.classList.add('hidden');
 }
+
+
