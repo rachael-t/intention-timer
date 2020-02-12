@@ -14,9 +14,8 @@ var timerButton = document.querySelector('#initiate-timer');
 var accomplishInput = document.querySelector('#accomplish');
 var accDisplay = document.querySelector('#accomplish-display');
 var timeDisplay = document.querySelector('#time-display');
-var minInput = document.querySelector('#minutes');
-var secInput = document.querySelector('#seconds');
-
+var minInput = document.getElementById('minutes');
+var secInput = document.getElementById('seconds');
 
 // Event Listeners
 clickStudy.addEventListener('click', displayColorStudy)
@@ -28,6 +27,8 @@ clickStart.addEventListener('click', timerColor)
 clickStart.addEventListener('click', getInput)
 
 // Functions:
+
+
 function displayColorStudy() {
   clickStudy.innerHTML = `<button class="activity-button study-button study-active">
     <img src="./assets/study-active.svg"
@@ -110,6 +111,7 @@ function handlePageSwitch() {
     newActivityHeader.classList.add('hidden');
     currentActivityHeader.classList.remove('hidden');
   };
+  timer(totalTime)
 };
 
 function timerColor() {
@@ -124,7 +126,28 @@ function timerColor() {
 
 function getInput() {
   var timeValue = minInput.value.toString() + ":" + secInput.value.toString();
+  totalTime = Number(minInput.value) * 60 + Number(secInput.value);
   console.log(timeValue);
-  timeDisplay.innerText = timeValue;
+  console.log(totalTime);
+  timeDisplay.innerText = totalTime;
   accDisplay.innerText = accomplishInput.value;
+  return totalTime;
+};
+
+var totalTime;
+var timeRemaining = 0;
+
+function timer(totalTime) {
+    timeRemaining = Number(minInput.value) * 60 + Number(secInput.value);
+    document.getElementById('time-display').innerHTML=timeRemaining;
+    intervalTimer = setInterval(function() {
+    timeRemaining--;
+    console.log(timeRemaining);
+    if (timeRemaining < 0) {
+      clearInterval(intervalTimer);
+      document.getElementById('time-display').innerHTML='00:00';
+    } else {
+      document.getElementById('time-display').innerHTML=timeRemaining;
+    }
+  }, 1000);
 };
