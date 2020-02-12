@@ -128,6 +128,15 @@ function timerColor() {
   }
 };
 
+function timerFinished() {
+  var timerInit = document.querySelector('#initiate-timer');
+  var logAct = document.querySelector('#logging');
+  timerInit.innerText = 'COMPLETE!';
+  if(document.querySelector('#initiate-timer').innerText === 'COMPLETE!') {
+    logAct.classList.remove('hidden');
+  }
+};
+
 function getInput() {
   var timeValue = minInput.value.toString() + ":" + secInput.value.toString();
   totalTime = Number(minInput.value) * 60 + Number(secInput.value);
@@ -150,7 +159,7 @@ function timer(totalTime) {
       clearInterval(intervalTimer);
       intervalTimer = null;
       document.getElementById('time-display').innerHTML= "00:00";
-      //have it show the log activity button at this step and congrats message
+      timerFinished();
     } else if (secRemaining % 60 < 10) {
       document.querySelector('#minutes-display').innerHTML= minRemaining;
       document.querySelector('#seconds-display').innerHTML= ":0" + secRemaining;
