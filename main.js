@@ -131,9 +131,15 @@ function timerColor() {
 function timerFinished() {
   var timerInit = document.querySelector('#initiate-timer');
   var logAct = document.querySelector('#logging');
+  var accomplishment = document.querySelector('#accomplish-display');
+  var timerReplace = document.querySelector('#time-display');
+  var messReplace = document.querySelector('#congrats');
   timerInit.innerText = 'COMPLETE!';
   if(document.querySelector('#initiate-timer').innerText === 'COMPLETE!') {
     logAct.classList.remove('hidden');
+    accomplishment.classList.add('hidden');
+    timerReplace.classList.add('hidden');
+    messReplace.classList.remove('hidden');
   }
 };
 
