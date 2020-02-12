@@ -135,7 +135,7 @@ function timerFinished() {
   if(document.querySelector('#initiate-timer').innerText === 'COMPLETE!') {
     logAct.classList.remove('hidden');
   }
-}
+};
 
 function getInput() {
   var timeValue = minInput.value.toString() + ":" + secInput.value.toString();
