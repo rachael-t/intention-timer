@@ -16,6 +16,10 @@ var accDisplay = document.querySelector('#accomplish-display');
 var timeDisplay = document.querySelector('#time-display');
 var minInput = document.getElementById('minutes');
 var secInput = document.getElementById('seconds');
+var totalTime;
+var timeRemaining = 0;
+var minRemaining = 0;
+var secRemaining = 0;
 
 // Event Listeners
 clickStudy.addEventListener('click', displayColorStudy)
@@ -25,6 +29,7 @@ window.addEventListener('load', hideCategoryWarning)
 clickStart.addEventListener('click', handlePageSwitch)
 clickStart.addEventListener('click', timerColor)
 clickStart.addEventListener('click', getInput)
+timerButton.addEventListener('click', timer)
 
 // Functions:
 
@@ -111,7 +116,6 @@ function handlePageSwitch() {
     newActivityHeader.classList.add('hidden');
     currentActivityHeader.classList.remove('hidden');
   };
-  timer(totalTime)
 };
 
 function timerColor() {
@@ -127,27 +131,32 @@ function timerColor() {
 function getInput() {
   var timeValue = minInput.value.toString() + ":" + secInput.value.toString();
   totalTime = Number(minInput.value) * 60 + Number(secInput.value);
-  console.log(timeValue);
-  console.log(totalTime);
-  timeDisplay.innerText = totalTime;
+  timeDisplay.innerText = timeValue;
   accDisplay.innerText = accomplishInput.value;
   return totalTime;
 };
 
-var totalTime;
-var timeRemaining = 0;
-
 function timer(totalTime) {
-    timeRemaining = Number(minInput.value) * 60 + Number(secInput.value);
-    document.getElementById('time-display').innerHTML=timeRemaining;
-    intervalTimer = setInterval(function() {
+  timeRemaining = getInput();
+  document.getElementById('time-display').innerHTML = `
+    <p id="minutes-display"></p>
+    <p id="seconds-display"></p>
+  `;
+  intervalTimer = setInterval(function() {
+    minRemaining = Math.floor(timeRemaining / 60);
+    secRemaining = (timeRemaining % 60);
     timeRemaining--;
-    console.log(timeRemaining);
-    if (timeRemaining < 0) {
+    if (secRemaining < 0) {
       clearInterval(intervalTimer);
-      document.getElementById('time-display').innerHTML='00:00';
-    } else {
-      document.getElementById('time-display').innerHTML=timeRemaining;
+      intervalTimer = null;
+      document.getElementById('time-display').innerHTML= "00:00";
+      //have it show the log activity button at this step and congrats message
+    } else if (secRemaining % 60 < 10) {
+      document.querySelector('#minutes-display').innerHTML= minRemaining;
+      document.querySelector('#seconds-display').innerHTML= ":0" + secRemaining;
+    } else if (secRemaining / 60 < 1) {
+      document.getElementById('minutes-display').innerHTML= `0${minRemaining}`
+      document.getElementById('seconds-display').innerHTML= `:${secRemaining}`;
     }
   }, 1000);
 };
