@@ -1,4 +1,4 @@
-// VARIABLES:
+// Variables:
 var clickStudy = document.querySelector('.study-button');
 var clickMeditate = document.querySelector('.meditate-button');
 var clickExercise = document.querySelector('.exercise-button');
@@ -20,8 +20,9 @@ var totalTime;
 var timeRemaining = 0;
 var minRemaining = 0;
 var secRemaining = 0;
+var logAct = document.querySelector('.logging');
 
-// Event Listeners
+// Event Listeners:
 clickStudy.addEventListener('click', displayColorStudy)
 clickMeditate.addEventListener('click', displayColorMeditate)
 clickExercise.addEventListener('click', displayColorExercise)
@@ -30,10 +31,9 @@ clickStart.addEventListener('click', handlePageSwitch)
 clickStart.addEventListener('click', timerColor)
 clickStart.addEventListener('click', getInput)
 timerButton.addEventListener('click', timer)
+logAct.addEventListener('click', handleLog)
 
 // Functions:
-
-
 function displayColorStudy() {
   clickStudy.innerHTML = `<button class="activity-button study-button study-active">
     <img src="./assets/study-active.svg"
@@ -81,7 +81,6 @@ function displayColorExercise() {
 
 function hideCategoryWarning() {
   document.getElementById('category-warning').style.visibility = "hidden";
-  console.log('cat is hidden');
 };
 
 function handlePageSwitch() {
@@ -176,29 +175,19 @@ function timer(totalTime) {
   }, 1000);
 };
 
-// SKETCH OF LOG ACT:
-
-var logAct = document.querySelector('.logging');
-
-logAct.addEventListener('click', handleLog)
-
 function handleLog() {
   var congratsMess = document.querySelector('#congrats');
   var timerButt = document.querySelector('#initiate-timer');
   var newAct = document.querySelector('.create-new-act');
   var logButt = document.querySelector('.logging');
   var defaultChange = document.querySelector('.default-message');
-  newAct.classList.remove('hidden');
-  logButt.classList.add('hidden');
-  timerButt.classList.add('hidden');
-  congratsMess.classList.add('hidden');
-  defaultChange.classList.add('hidden');
-  cardLog();
+  var newCard = document.querySelector('.new-cards')
+  if(logButt.classList.contains('logging')) {
+    congratsMess.style.display = 'none';
+    defaultChange.style.display = 'none';
+    logButt.style.display = 'none';
+    timerButt.style.display = 'none';
+    newCard.style.display = 'block';
+    newAct.style.display = 'block';
+  }
 }
-
-function cardLog() {
-  var newCards = document.querySelector('.new-cards');
-  newCards.classList.remove('hidden');
-}
-
-
