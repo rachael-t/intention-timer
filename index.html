@@ -22,16 +22,15 @@
             <button class="activity-button exercise-button" type="button">
               <img src="./assets/exercise.svg"
               alt="exercise logo">Exercise</button>
-            <div id="category-warning">
-              <img src="./assets/warning.svg" alt="warning sign">
-              <p>A category is required.</p>
-            </div>
           </section>
+          <div id="category-warning">
+            <img src="./assets/warning.svg" alt="warning sign">
+            <p id="category-message">A category is required.</p>
+          </div>
         <section class="category-inputs">
           <div class="accomplish-input">
             <p>What would you like to accomplish during this time?</p>
             <input type="text" id="accomplish"/>
-
           </div>
           <section class="warning-message">
             <div class="no-warning">
@@ -73,7 +72,7 @@
           <p id="minutes-display"></p>
           <p id="seconds-display"></p>
         </div>
-        <p id="congrats" class="hidden">YOU DID IT!!!!</p>
+        <span id="congrats" class="hidden">YOU DID IT!!!!</span>
         <button id="initiate-timer">START</button>
         <button class="logging hidden">LOG ACTIVITY</button>
         <button class="create-new-act hidden">CREATE A NEW ACTIVITY</button>
@@ -86,7 +85,11 @@
         You haven't logged any activities yet.<br>
         Complete the form to the left to get started!
         </p>
-        <div class="new-cards hidden"></div>
+        <div class="new-cards hidden">
+          <p class="card-title">Meditate</p>
+          <p>5 MIN 0 SECONDS</p>
+          <p>Deep Breathing</p>
+        </div>
       </section>
     </aside>
   </main>

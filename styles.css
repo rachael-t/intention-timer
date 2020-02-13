@@ -1,42 +1,42 @@
 /* UNIVERSAL STYLING */
 * {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    height: 100%;
-    margin: 0px;
+  height: 100%;
+  margin: 0px;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    margin: 0px;
-    font-size: 26px;
-    padding: 16px 0px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin: 0px;
+  font-size: 26px;
+  padding: 16px 0px;
 }
 
 h1, button, img, .categories, .activity-page, .timer-page {
-    background-color: #46424D;
+  background-color: #46424D;
 }
 
 .main-page {
-    display: flex;
-    background: #2B2733;
-    width: 100%;
-    height: calc(100% - 47px);
+  display: flex;
+  background: #2B2733;
+  width: 100%;
+  height: calc(100% - 47px);
 }
 
 h2 {
-    color: #CBC9CF;
-    position: absolute;
-    margin: 35px 40px;
-    font-size: 24px;
+  color: #CBC9CF;
+  position: absolute;
+  margin: 35px 40px;
+  font-size: 24px;
 }
 
 p {
@@ -45,131 +45,143 @@ p {
 
 /* ACTIVTY PAGE LOG */
 .activity-page, .timer-page {
-    color: #fff;
-    margin: 80px 40px 40px 40px;
-    width: 59%;
+  color: #fff;
+  margin: 80px 40px 40px 40px;
+  width: 59%;
 }
 
-.categories, .current-activity-timer {
-    display: flex;
-    flex-direction: column;
-    height: 90%;
-    margin: 45px 70px;
+.categories {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  margin: 45px 70px;
 }
 
 .category-buttons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 img {
-    display: block;
-    width: 25px;
+  display: block;
+  width: 25px;
 }
 
 .activity-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    width: 150px;
-    height: 70px;
-    font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 150px;
+  height: 70px;
+  font-size: 16px;
+  border-radius: 3px;
+  border-width: 2px;
 }
 
 input {
-    width: 100%;
-    background: none;
-    border: none;
-    border-bottom: 1px solid #fff;
-    font-size: 16px;
-    color: #CBC9CF;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 16px;
+  color: #CBC9CF;
 }
 
 .category-inputs {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#category-warning img {
+  display: inline-block;
+  width: 15px;
+  margin: 15px 5px 0px 0px;
 }
 
 .warning-message {
-    color: #EFB7EC;
-    margin: 5px 0px 0px 0px;
-    height: 15%;
-    width: 50%;
+  color: #EFB7EC;
+  margin: 5px 0px 0px 0px;
+  height: 15%;
+  width: 50%;
 }
 
-.warning-message img, .warning-message p, #minutes-message, #seconds-message {
-    display: inline-block;
-    font-size: 14px;
+.warning-message img, .warning-message p, #minutes-message, #seconds-message, #category-message  {
+  display: inline-block;
+  font-size: 14px;
+  color: #EFB7EC;
 }
 
 .warning-message img {
-    width: 15px;
-    margin: 0px 5px 0px 0px;
+  width: 15px;
+  margin: 0px 5px 0px 0px;
 }
 
 /* HIDDEN BUTTON STYLING */
 .no-warning, #no-warning-minutes, #no-warning-seconds {
-    display: none;
+  display: none;
 }
 
 .accomplish-input {
-    flex: 0 1 100%;
-    margin: 45px 0px 0px 0px;
+  flex: 0 1 100%;
 }
 
 .time-inputs {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* margin: 0px 0px 60px 0px; */
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .minutes-input {
-    flex: 1;
-    padding: 0px 150px 0px 0px;
+  flex: 1;
+  padding: 0px 150px 0px 0px;
 }
 
 /* HIDDEN BUTTON 2 STYLING */
-
 .warning-minutes {
-    display: flex;
-    color: #EFB7EC;
-    font-size: 13px;
+  display: flex;
+  color: #EFB7EC;
+  font-size: 13px;
 }
 
 .warning-minutes img {
-    display: inline-block;
-    width: 15px;
-    margin: 0px 5px 0px 0px;
+  display: inline-block;
+  width: 15px;
+  margin: 0px 5px 0px 0px;
 }
 
 .seconds-input {
-    flex: 1;
+  flex: 1;
 }
 
 /* HIDDEN BUTTON 3 STYLING */
-
 .warning-seconds {
-    display: flex;
-    color: #EFB7EC;
+  display: flex;
+  color: #EFB7EC;
 }
 
 .warning-seconds img {
-    display: inline-block;
-    width: 15px;
-    margin: 0px 5px 0px 0px;
+  display: inline-block;
+  width: 15px;
+  margin: 0px 5px 0px 0px;
 }
 
 .start-button, .logging, .create-new-act {
-    background: #fff;
-    font-size: 16px;
-    padding: 9px 40px 9px 40px;
-    border-radius: 3px 3px;
-    align-self: flex-end;
-    margin-top: 70px;
+  background: #fff;
+  font-size: 16px;
+  padding: 9px 40px 9px 40px;
+  border-radius: 3px 3px;
+  align-self: flex-end;
+  margin-top: 70px;
+}
+
+button:focus {outline:0;}
+
+.activity-page, .timer-page {
+  box-shadow: 1px 15px 15px 1px #26222D;
+  border-radius: 5px;
 }
 
 /* TIMER PAGE LOG */
@@ -177,115 +189,101 @@ input {
   display: none;
 }
 
-/* remember to maybe not have width and height here */
 #accomplish-display, #time-display{
-  border: 1px solid white;
-  width: 200px;
-  height: 100px;
+  text-align: center;
 }
 
 #accomplish-display {
-  justify-content: flex-start;
+  margin: 4% 25% 0% 25%;
+  font-size: 25px;
 }
 
-#time-display {
+ #time-display, #minutes-display, #seconds-display {
+  display: flex;
+  height: 20%;
   justify-content: center;
+  align-content: center;
+  font-size: 75px;
+  font-weight: bold;
+  margin: 0px;
 }
 
 #initiate-timer {
   border-radius: 50%;
   border: 2px solid white;
-  flex: 2;
   width: 200px;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  height: 200px;
+  margin: 8% 35% 0% 35%;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: #FFF;
 }
 
 .current-activity-timer {
-  align-items: center;
   margin: 6px 70px 80px 70px;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
 }
 
 /* ASIDE ACTIVITY LOG */
 aside {
-    display: flex;
-    flex-direction: row;
-    width: 41%;
-    flex: 1;
-    border-left: 3px solid #46424D;
+  display: flex;
+  flex-direction: row;
+  width: 41%;
+  flex: 1;
+  border-left: 3px solid #46424D;
 }
 
 .activity-log {
-    margin: 80px 25px;
-    color: #CBC9CF;
+  margin: 80px 25px;
+  color: #CBC9CF;
 }
 
 .default-message {
-    font-size: 14px;
-    text-align: center;
+  font-size: 14px;
+  text-align: center;
 }
-
 
 /* ACTIVE BUTTON STYLE */
 .study-active {
-    color: #B3FD78;
-    border-color: #B3FD78;
+  color: #B3FD78;
+  border-color: #B3FD78;
 }
 
 .meditate-active {
-    color: #C278FD;
-    border-color: #C278FD;
+  color: #C278FD;
+  border-color: #C278FD;
 }
 
 .exercise-active {
-    color: #FD8078;
-    border-color: #FD8078;
+  color: #FD8078;
+  border-color: #FD8078;
 }
 
+#congrats {
+  margin: 10px 0px 0px 290px
+}
 
+.logging {
+  position: relative;
+  right: 36%;
+}
 
+.create-new-act {
+  position: relative;
+  right: 29%;
+}
 
+.new-cards {
+  border-radius: 5px 5px;
+  height: 21%;
+  width: 246%;
+  background: #46424D;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* CAT SHELL BLANK PAGE STYLING: */
-
-/* .cat-shell(OLD NAME) {
-    display: none;
-    margin: 80px 40px 40px 40px;
-    width: 59%;
-     color: #fff;
-    for dramatic purposes
-    background-color: black; */
-
-
-
-
-
-
-
-
-
-
-
-
-/* SPECS:
-Main background: #2B2733
-Text on main background: #CBC9CF
-Header, cards: #46424D
-Card shadow: #26222D
-Text on header and cards: #FFF
-Study: #B3FD78
-Meditate: #C278FD
-Exercise: #FD8078
-Error: #EFB7EC  */
+.card-title {
+  font-weight: bold;
+  font-size: 20px;
+}
