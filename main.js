@@ -130,10 +130,16 @@ function timerColor() {
 
 function timerFinished() {
   var timerInit = document.querySelector('#initiate-timer');
-  var logAct = document.querySelector('#logging');
+  var logAct = document.querySelector('.logging');
+  var accomplishment = document.querySelector('#accomplish-display');
+  var timerReplace = document.querySelector('#time-display');
+  var messReplace = document.querySelector('#congrats');
   timerInit.innerText = 'COMPLETE!';
   if(document.querySelector('#initiate-timer').innerText === 'COMPLETE!') {
     logAct.classList.remove('hidden');
+    accomplishment.classList.add('hidden');
+    timerReplace.classList.add('hidden');
+    messReplace.classList.remove('hidden');
   }
 };
 
@@ -169,3 +175,30 @@ function timer(totalTime) {
     }
   }, 1000);
 };
+
+// SKETCH OF LOG ACT:
+
+var logAct = document.querySelector('.logging');
+
+logAct.addEventListener('click', handleLog)
+
+function handleLog() {
+  var congratsMess = document.querySelector('#congrats');
+  var timerButt = document.querySelector('#initiate-timer');
+  var newAct = document.querySelector('.create-new-act');
+  var logButt = document.querySelector('.logging');
+  var defaultChange = document.querySelector('.default-message');
+  newAct.classList.remove('hidden');
+  logButt.classList.add('hidden');
+  timerButt.classList.add('hidden');
+  congratsMess.classList.add('hidden');
+  defaultChange.classList.add('hidden');
+  cardLog();
+}
+
+function cardLog() {
+  var newCards = document.querySelector('.new-cards');
+  newCards.classList.remove('hidden');
+}
+
+
