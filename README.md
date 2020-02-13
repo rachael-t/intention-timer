@@ -1,9 +1,9 @@
-#Intention Timer - Pair Project
-##Iteration 0 - Zero State
+# Intention Timer - Pair Project
+## Iteration 0 - Zero State
 Build the layout with HTML & CSS
 Before moving on, the header and left side of the page should match the comp.
 The right side of the page should only have the sub-header and not that no activities exist since you do not have past activity card functionality yet!
-##Iteration 1 - Form Functionality
+## Iteration 1 - Form Functionality
 Form Functionality
 When an activity category is clicked on (Exercise, Meditate, or Study), the associated border and icon should change colors to give a visual indication that it has been selected. Colors are provided in comp.
 An input field should be provided for What would you like to accomplish during this time?, minutes and seconds. The minutes and seconds fields should only accept numbers. (Hint: more than one layer should probably be put into place to ensure this. Make sure that e cannot be accepted.)
