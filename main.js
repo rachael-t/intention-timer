@@ -193,6 +193,12 @@ function handleLog() {
   timerButt.classList.add('hidden');
   congratsMess.classList.add('hidden');
   defaultChange.classList.add('hidden');
+  cardLog();
+}
+
+function cardLog() {
+  var newCards = document.querySelector('.new-cards');
+  newCards.classList.remove('hidden');
 }
 
 
