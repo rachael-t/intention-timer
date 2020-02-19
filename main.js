@@ -27,9 +27,7 @@ clickStudy.addEventListener('click', displayColorStudy)
 clickMeditate.addEventListener('click', displayColorMeditate)
 clickExercise.addEventListener('click', displayColorExercise)
 window.addEventListener('load', hideCategoryWarning)
-clickStart.addEventListener('click', handlePageSwitch)
-clickStart.addEventListener('click', timerColor)
-clickStart.addEventListener('click', getInput)
+clickStart.addEventListener('click', moveToTimerPage)
 timerButton.addEventListener('click', timer)
 logAct.addEventListener('click', handleLog)
 
@@ -126,6 +124,12 @@ function timerColor() {
     timerButton.style.border="2px solid #FD8078"
   }
 };
+
+function moveToTimerPage () {
+  handlePageSwitch();
+  timerColor();
+  getInput();
+}
 
 function timerFinished() {
   var timerInit = document.querySelector('#initiate-timer');
